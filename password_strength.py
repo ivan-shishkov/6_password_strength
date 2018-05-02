@@ -31,10 +31,22 @@ def parse_command_line_arguments():
     return command_line_arguments
 
 
+def print_score_password_strength(score):
+    print('{:-<36}'.format(''))
+    print('Score of password strength: {:2} of 10'.format(
+        score,
+    ))
+    print('{:-<36}'.format(''))
+
+
 def main():
     command_line_arguments = parse_command_line_arguments()
 
     password = command_line_arguments.password
+
+    print_score_password_strength(
+        score=get_password_strength(password),
+    )
 
 
 if __name__ == '__main__':
