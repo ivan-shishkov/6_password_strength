@@ -12,6 +12,21 @@ $ pip install -r requirements.txt
 
 ```
 
+Usage:
+
+```
+
+$ python3 password_strength.py -h
+usage: password_strength.py [-h] password
+
+positional arguments:
+  password    a password for analysis
+
+optional arguments:
+  -h, --help  show this help message and exit
+
+```
+
 # Project Goals
 
 The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
