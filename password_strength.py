@@ -3,7 +3,7 @@ import argparse
 from zxcvbn import zxcvbn
 
 
-def get_password_strength(password):
+def get_score_password_strength(password):
     password_analysis_result = zxcvbn(password)
 
     score_password_strength = int(password_analysis_result['guesses_log10'])
@@ -45,7 +45,7 @@ def main():
     password = command_line_arguments.password
 
     print_score_password_strength(
-        score=get_password_strength(password),
+        score=get_score_password_strength(password),
     )
 
 
