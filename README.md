@@ -27,6 +27,32 @@ optional arguments:
 
 ```
 
+Examples of script launch on Linux:
+
+```
+
+$ python3 password_strength.py 123456789
+------------------------------------
+Score of password strength:  1 of 10
+------------------------------------
+
+$ python3 password_strength.py password1
+------------------------------------
+Score of password strength:  2 of 10
+------------------------------------
+
+$ python3 password_strength.py PaSsWoRd1
+------------------------------------
+Score of password strength:  4 of 10
+------------------------------------
+
+$ python3 password_strength.py r4Bh34Aq1
+------------------------------------
+Score of password strength:  9 of 10
+------------------------------------
+
+```
+
 # Project Goals
 
 The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
