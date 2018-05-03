@@ -20,6 +20,12 @@ def get_score_password_strength(
     return score_password_strength
 
 
+def print_script_info():
+    print('{:-<36}'.format(''))
+    print('{:^36}'.format('Password Strength Calculator'))
+    print('{:-<36}'.format(''))
+
+
 def print_score_password_strength(score):
     print('{:-<36}'.format(''))
     print('Score of password strength: {:2} of 10'.format(
@@ -29,6 +35,8 @@ def print_score_password_strength(score):
 
 
 def main():
+    print_script_info()
+
     password = input('Enter a password for analysis: ')
 
     if not password:
