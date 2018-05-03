@@ -1,4 +1,4 @@
-import argparse
+import sys
 
 from zxcvbn import zxcvbn
 
@@ -20,20 +20,6 @@ def get_score_password_strength(
     return score_password_strength
 
 
-def parse_command_line_arguments():
-    parser = argparse.ArgumentParser()
-
-    parser.add_argument(
-        'password',
-        help='a password for analysis',
-        type=str,
-    )
-
-    command_line_arguments = parser.parse_args()
-
-    return command_line_arguments
-
-
 def print_score_password_strength(score):
     print('{:-<36}'.format(''))
     print('Score of password strength: {:2} of 10'.format(
@@ -43,9 +29,10 @@ def print_score_password_strength(score):
 
 
 def main():
-    command_line_arguments = parse_command_line_arguments()
+    password = input('Enter a password for analysis: ')
 
-    password = command_line_arguments.password
+    if not password:
+        sys.exit('Password is empty')
 
     print_score_password_strength(
         score=get_score_password_strength(password),
