@@ -1,6 +1,6 @@
 # Password Strength Calculator
 
-[TODO. There will be project description]
+This script allows to calculate a password strength with a score from 1 (very poor password) to 10 (very strong password).
 
 # Project Goals
 
