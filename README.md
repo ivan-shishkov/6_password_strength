@@ -12,43 +12,44 @@ $ pip install -r requirements.txt
 
 ```
 
-Usage:
-
-```
-
-$ python3 password_strength.py -h
-usage: password_strength.py [-h] password
-
-positional arguments:
-  password    a password for analysis
-
-optional arguments:
-  -h, --help  show this help message and exit
-
-```
-
 Examples of script launch on Linux:
 
 ```
 
-$ python3 password_strength.py 123456789
+$ python3 password_strength.py
+------------------------------------
+    Password Strength Calculator
+------------------------------------
+Enter a password for analysis: 123456789
 ------------------------------------
 Score of password strength:  1 of 10
 ------------------------------------
 
-$ python3 password_strength.py password1
+$ python3 password_strength.py
+------------------------------------
+    Password Strength Calculator
+------------------------------------
+Enter a password for analysis: password1
 ------------------------------------
 Score of password strength:  2 of 10
 ------------------------------------
 
-$ python3 password_strength.py PaSsWoRd1
+$ python3 password_strength.py
+------------------------------------
+    Password Strength Calculator
+------------------------------------
+Enter a password for analysis: PaSsWoRd1
 ------------------------------------
 Score of password strength:  4 of 10
 ------------------------------------
 
-$ python3 password_strength.py r4Bh34Aq1
+$ python3 password_strength.py
 ------------------------------------
-Score of password strength:  9 of 10
+    Password Strength Calculator
+------------------------------------
+Enter a password for analysis: r4Hj6s2Df3
+------------------------------------
+Score of password strength: 10 of 10
 ------------------------------------
 
 ```
