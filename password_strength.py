@@ -3,16 +3,19 @@ import argparse
 from zxcvbn import zxcvbn
 
 
-def get_score_password_strength(password):
+def get_score_password_strength(
+        password,
+        min_score_password_strength=1,
+        max_score_password_strength=10):
     password_analysis_result = zxcvbn(password)
 
     score_password_strength = int(password_analysis_result['guesses_log10'])
 
-    if score_password_strength < 1:
-        score_password_strength = 1
+    if score_password_strength < min_score_password_strength:
+        score_password_strength = min_score_password_strength
 
-    if score_password_strength > 10:
-        score_password_strength = 10
+    if score_password_strength > max_score_password_strength:
+        score_password_strength = max_score_password_strength
 
     return score_password_strength
 
