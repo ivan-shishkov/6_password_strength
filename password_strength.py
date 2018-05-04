@@ -11,13 +11,15 @@ def get_score_password_strength(
 
     score_password_strength = int(password_analysis_result['guesses_log10'])
 
-    if score_password_strength < min_score_password_strength:
-        score_password_strength = min_score_password_strength
+    score_password_strength_limited = min(
+        max(
+            score_password_strength,
+            min_score_password_strength,
+        ),
+        max_score_password_strength,
+    )
 
-    if score_password_strength > max_score_password_strength:
-        score_password_strength = max_score_password_strength
-
-    return score_password_strength
+    return score_password_strength_limited
 
 
 def print_score_password_strength(score):
