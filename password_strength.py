@@ -1,4 +1,5 @@
 import sys
+from getpass import getpass
 
 from zxcvbn import zxcvbn
 
@@ -31,7 +32,7 @@ def print_score_password_strength(score):
 
 
 def main():
-    password = input('Enter a password for analysis: ')
+    password = getpass(prompt='Enter a password for analysis: ')
 
     if not password:
         sys.exit('Password is empty')
